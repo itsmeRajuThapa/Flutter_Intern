@@ -117,9 +117,10 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             height: 300,
             width: 400,
-            color: Colors.grey,
+            // color: Colors.grey,
             child: imageUrl,
-          )
+          ),
+          SizedBox(height: 10)
         ]),
       ),
     );
