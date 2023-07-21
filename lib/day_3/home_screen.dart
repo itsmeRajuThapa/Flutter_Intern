@@ -14,16 +14,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Day 3"),
-        centerTitle: true,
-        backgroundColor: Colors.purpleAccent,
-        actions: const [Icon(Icons.brightness_3_outlined)],
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Day 3"),
+      //   centerTitle: true,
+      //   backgroundColor: Colors.purpleAccent,
+      //   actions: const [Icon(Icons.brightness_3_outlined)],
+      // ),
       body: Column(
         children: [
           SizedBox(
-            height: 160,
+            height: 125,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               // itemCount: items.length,
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SizedBox(
-                    height: 150,
+                    height: 120,
                     width: 130,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Image.asset(
                             items[index]['image'],
                             fit: BoxFit.cover,
-                            height: 100,
+                            height: 70,
                             width: 130,
                           ),
                         ),
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 10),
           Container(
             color: Colors.white,
-            height: 475,
+            height: 435,
             width: double.infinity,
             child: SingleChildScrollView(
               child: Column(

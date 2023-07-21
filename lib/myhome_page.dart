@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-
 import 'list.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -52,10 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Day 2 Task'),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   title: const Text('Day 2 Task'),
+      //   centerTitle: true,
+      // ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -98,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: const Text('ElevationButton'),
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.all(15),
-              elevation: 10,
+              // elevation: 10,
 
               //maximumSize: Size(600, 50),
               backgroundColor: backgroundColor,
@@ -116,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(height: 10),
           Container(
             height: 300,
-            width: 400,
+            width: 300,
             // color: Colors.grey,
             child: imageUrl,
           ),
