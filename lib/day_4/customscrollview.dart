@@ -10,6 +10,7 @@ class CustomeScrollView extends StatefulWidget {
 }
 
 class _CustomeScrollViewState extends State<CustomeScrollView> {
+  bool seeAllList = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,29 +27,40 @@ class _CustomeScrollViewState extends State<CustomeScrollView> {
           childCount: 3,
           (BuildContext context, int index) {
             // for (var i = 1; i <= 10; i++)
-            return Container(
-              height: 250,
-              color: Colors.grey,
-              child: ListView.builder(
-                itemCount: 5,
-                itemBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 194, 119, 171),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      height: 60,
-                      child: ListTile(
-                        leading: const CircleAvatar(),
-                        title: Text('Hello Word $index'),
-                        subtitle: Text('Subtitle of ListTitle'),
-                      ),
-                    ),
-                  );
-                },
-              ),
+            return Column(
+              children: [
+                SizedBox(
+                  height: seeAllList ? 430 : 275,
+                  // height: 275,
+                  // color: Colors.grey,
+                  child: ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: 5,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        margin: const EdgeInsets.fromLTRB(7, 0, 7, 9),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 194, 119, 171),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        //height: 60,
+                        child: ListTile(
+                          leading: const CircleAvatar(),
+                          title: Text('Hello Word ${index + 1}'),
+                          subtitle: const Text('Subtitle of ListTitle'),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        seeAllList = !seeAllList;
+                      });
+                    },
+                    child: Text(seeAllList ? 'See Less' : 'See More'))
+              ],
             );
           },
         )),

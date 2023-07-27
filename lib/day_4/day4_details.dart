@@ -60,7 +60,6 @@ class _DetailsOfDay4State extends State<DetailsOfDay4> {
                     mainAxisExtent: 140),
                 itemCount: seeAllGridView ? 20 : 10,
                 itemBuilder: (BuildContext context, int index) {
-                  // for (int i = 1; i < 20; i++);
                   return Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
